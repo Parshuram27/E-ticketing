@@ -64,3 +64,9 @@
         <finalName>LibraryRegistration</finalName>
     </build>
 </project>
+<!-- # 1. Pull the official Nagios Core image
+docker pull docker.io/nagios/nagios && \
+# 2. Run the container, expose port 8888, and run detached
+docker run -d --name nagios_local -p 8888:80 docker.io/nagios/nagios && \
+# 3. Verify the container started (optional)
+docker ps -f name=nagios_local -->
