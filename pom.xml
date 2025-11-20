@@ -9,7 +9,6 @@
     <packaging>war</packaging>
 
     <dependencies>
-        <!-- Servlet API -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -17,7 +16,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- JSP API -->
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>javax.servlet.jsp-api</artifactId>
@@ -25,13 +23,25 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- JSTL (optional if you want JSTL tags later) -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>your-repo-id-for-snapshots</id>
+            <name>Your Snapshot Repository Name</name>
+            <url>http://your.repository.url/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>your-repo-id-for-releases</id>
+            <name>Your Release Repository Name</name>
+            <url>http://your.repository.url/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
 
     <build>
         <finalName>LibraryRegistration</finalName>
