@@ -8,9 +8,20 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>your-snapshot-repo-id</id>
+            <name>Your Company Snapshots Repository</name>
+            <url>http://your.repository.com/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>your-release-repo-id</id>
+            <name>Your Company Releases Repository</name>
+            <url>http://your.repository.com/nexus/content/repositories/releases</url>
+        </repository>
+    </distributionManagement>
     <dependencies>
-             
-        <!-- Servlet API -->
+            
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -18,9 +29,24 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- JSP API -->
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>2.3.3</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>LibraryRegistration</finalName>
+    </build>
+</project>vlet.jsp</groupId>
             <artifactId>javax.servlet.jsp-api</artifactId>
             <version>2.3.3</version>
             <scope>provided</scope>
